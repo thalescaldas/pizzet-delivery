@@ -76,5 +76,8 @@ Pré-condições gerais: MySQL 8 rodando com o script de `database/`; API em exe
 | T-DB-02 | 03/11/2026 | Claude (idem) | ✅ `99_testes_restricoes.sql`: 21 inserções/exclusões inválidas recusadas (CHECK, UNIQUE, FK, RESTRICT, coluna calculada) | idem |
 | T-DB-04 (parcial, só banco) | 03/11/2026 | Claude (idem) | ✅ alterar preço e apagar endereço não muda o pedido gravado | idem |
 | Busca sem acento (banco) | 03/11/2026 | Claude (idem) | ✅ após correção (`SET NAMES utf8mb4`): "lactea" encontra "Láctea" | idem |
+| T-BLD-01 (parcial) | 03/11/2026 | Claude (container, .NET 8.0.133) | ✅ `dotnet build -warnaserror`: 0 erros, 0 avisos; `dotnet run` sobe a API | saída na sessão |
+| T-CAT-01 (só API) | 03/11/2026 | Claude (idem) | ✅ `GET /api/produtos` devolve 11 ativos e não inclui o inativo; `/api/produtos/12` (inativo) → 404; `/999` → 404 | idem |
+| T-CAT-02 (só API) | 03/11/2026 | Claude (idem) | ✅ "lactea" e "CALABRESA" encontram os produtos; `' OR 1=1 --` e `%` → lista vazia (sem injeção); busca com 101 caracteres → 400; categoria inválida → 400 | idem |
 
 Observação: testes feitos no container de desenvolvimento, não nas máquinas da equipe. Recomenda-se repetir no MySQL Workbench.

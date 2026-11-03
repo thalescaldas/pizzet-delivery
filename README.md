@@ -6,7 +6,11 @@ Sistema web acadêmico de delivery de pizzas com tema espacial, desenvolvido com
 
 ## ⚠️ Estado atual
 
-**O sistema ainda não está funcional.** Este repositório contém apenas a fundação: estrutura de pastas e documentação de requisitos, arquitetura, pendências e testes. Não há telas, API, autenticação nem banco implementados.
+**O sistema ainda não está funcional para o usuário final.** Já existem:
+- o banco MySQL (`database/`), com script testado;
+- uma API C# inicial (`backend/`) que lista, busca e detalha produtos.
+
+Ainda não há telas, autenticação, carrinho nem pedidos.
 
 ## Tecnologias previstas
 
@@ -39,7 +43,7 @@ CLAUDE.md   instruções permanentes do projeto
 
 ## Como executar
 
-Ainda não aplicável. Esta seção será preenchida quando a API e o banco existirem, com:
+Por enquanto: banco em [`database/README.md`](database/README.md) e API em [`backend/README.md`](backend/README.md). Esta seção será completada com:
 
 1. Pré-requisitos (.NET SDK, MySQL 8).
 2. Criação do banco a partir de `database/`.

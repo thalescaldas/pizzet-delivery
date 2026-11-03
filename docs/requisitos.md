@@ -44,8 +44,8 @@ Sobre as máscaras do FE-12: em **Nome**, "máscara" significa aceitar apenas le
 
 | ID | Requisito | Origem | Estado | Teste |
 |----|-----------|--------|--------|-------|
-| CS-01 | API em C# com ASP.NET Core Web API | [D] — adequação [P] | [ ] | T-INT-01 |
-| CS-02 | API integrada ao Front-End e ao MySQL (integração real, sem dados fixos no JS) | [C] | [ ] | T-INT-01 |
+| CS-01 | API em C# com ASP.NET Core Web API | [D] — adequação [P] | [~] esqueleto .NET 8 compilando | T-INT-01 |
+| CS-02 | API integrada ao Front-End e ao MySQL (integração real, sem dados fixos no JS) | [C] | [~] API ↔ MySQL ok (produtos); front pendente | T-INT-01 |
 | CS-03 | CRUD real de produtos: criar, ler, atualizar, desativar (exclusão lógica) | [C] | [ ] | T-ADM-01 |
 | CS-04 | CRUD de produtos restrito a Administrador | [D] | [ ] | T-ADM-02 |
 | CS-05 | Uso de classes, métodos, listas, condicionais, laços e orientação a objetos onde fizer sentido | [C] — tópicos específicos [P] | [ ] | revisão de código |

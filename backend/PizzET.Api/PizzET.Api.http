@@ -1,0 +1,21 @@
+# Requisições de teste (VS Code com extensão REST Client, ou Visual Studio / Rider).
+@api = http://localhost:5039
+
+### Lista todos os produtos ativos
+GET {{api}}/api/produtos
+Accept: application/json
+
+### Busca por texto (ignora acentos e maiúsculas)
+GET {{api}}/api/produtos?busca=lactea
+
+### Filtra por categoria
+GET {{api}}/api/produtos?categoria=BEBIDA
+
+### Categoria inválida -> 400
+GET {{api}}/api/produtos?categoria=SOBREMESA
+
+### Detalhe de um produto
+GET {{api}}/api/produtos/1
+
+### Produto inativo (Pizza Eclipse, id 12) -> 404
+GET {{api}}/api/produtos/12
