@@ -35,6 +35,7 @@ CLAUDE.md   instruções permanentes do projeto
 - [Arquitetura](docs/arquitetura.md)
 - [Pendências](docs/pendencias.md)
 - [Plano de testes](docs/plano-de-testes.md)
+- [Deploy e evidências (FileZilla)](docs/deploy.md)
 
 ## Como executar
 

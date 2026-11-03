@@ -41,14 +41,23 @@ Pré-condições gerais: MySQL 8 rodando com o script de `database/`; API em exe
 ## Validação e máscaras (FE-12, FE-13, CS-13)
 - **T-VAL-01 Máscaras** — digitar telefone/CEP → formatação aplicada; colar valor sem formatação → formatado; apagar com Backspace funciona normalmente.
 - **T-VAL-02 Numéricos** — campos numéricos rejeitam letras, mas setas, Tab, Backspace, Delete e colar números funcionam; teclado numérico aparece no celular (`inputmode`).
+- **T-VAL-04 CPF** — CPF com dígitos verificadores inválidos (ex.: `111.111.111-11`) → recusado no front e **na API** (enviando direto); CPF já cadastrado → erro; no banco o CPF fica só com dígitos. Máscara de Nome recusa números e símbolos.
 - **T-VAL-03 Erros de API** — campos obrigatórios vazios enviados direto à API → 400 com mensagens por campo, exibidas junto aos campos no front.
 
 ## UX e acessibilidade (FE-09, FE-10, FE-11, FE-14..17)
 - **T-UX-01 Responsivo** — testar em 375px, 768px e 1280px: sem rolagem horizontal, menu utilizável, botões tocáveis.
 - **T-UX-02 Tema** — alternar claro/escuro; recarregar e abrir outra página → preferência mantida.
 - **T-UX-03 Acessibilidade** — navegar todo o fluxo só com teclado; foco sempre visível; todos os campos com `<label>`; contraste verificado (ex.: Lighthouse/DevTools) nos dois temas.
-- **T-UX-04 Figma** — link do protótipo aprovado registrado em `docs/` antes do commit do visual final; telas implementadas correspondem ao protótipo.
+- **T-UX-04 Figma (opcional)** — se o rascunho for feito, registrar o link em `docs/`.
 - **T-UX-05 Tecnologias** — repositório não contém React/Vue/Angular/jQuery nem bundlers no front.
+- **T-UX-06 Modais de login/cadastro** — abrir pelo teclado; foco vai para o primeiro campo; Tab não sai do modal; Esc fecha e devolve o foco ao botão; erros anunciados junto aos campos; funciona em 375px.
+
+## Deploy (DEP-01..10) — roteiro em `deploy.md`
+- **T-DEP-01** — FileZilla conecta; log mostra "Autenticado" e "Listagem do diretório concluída".
+- **T-DEP-02** — origem local `frontend/` e destino remoto lado a lado antes do envio.
+- **T-DEP-03** — após o envio: 0 falhas e fila vazia.
+- **T-DEP-04** — listagem remota com data/hora do deploy; pastas 0755, arquivos 0644.
+- **T-DEP-05** — URL pública abre com cadeado HTTPS; Network mostra o documento com 200 OK; Console sem 404/500/CORS; login e catálogo funcionam contra a API pública.
 
 ## Banco e integração (DB-01..09, CS-02)
 - **T-DB-01 Script reproduzível** — em um MySQL 8 vazio, executar os scripts de `database/` na ordem → sem erros; nenhum segredo nos arquivos.

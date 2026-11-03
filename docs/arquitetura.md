@@ -16,7 +16,21 @@
 - O Front-End só exibe dados e envia intenções (ex.: "produto 3, quantidade 2"). **Preços, totais, permissões e status são decididos pela API.**
 
 ### Hospedagem local (desenvolvimento)
-Recomendação inicial para simplificar: a própria API serve os arquivos de `frontend/` como estáticos (`UseStaticFiles` apontando para a pasta). Assim front e API ficam na **mesma origem**, evitando CORS e simplificando cookies. Se no deploy o front ficar no FTP e a API em outro host, ativa-se CORS restrito (ver §6).
+Para simplificar, a própria API serve os arquivos de `frontend/` como estáticos (`UseStaticFiles` apontando para a pasta). Assim front e API ficam na **mesma origem**, o que evita CORS e simplifica cookies.
+
+### Hospedagem pública (deploy avaliado)
+O deploy é avaliado por **upload via FileZilla** (ver `deploy.md`). O provável cenário é:
+
+```
+Navegador ──HTTPS──▶ Servidor do FTP (arquivos de frontend/)
+    └──────HTTPS + CORS──▶ Host da API C# ──▶ MySQL   (host a definir: P-13, P-23)
+```
+
+Consequências:
+- A URL da API fica em **um único arquivo** (`frontend/js/config.js`), trocado no deploy.
+- Todos os caminhos do front são **relativos**, para funcionar em qualquer subpasta do servidor.
+- A API libera CORS **apenas** para a origem pública do front.
+- Se as origens forem de sites diferentes, a estratégia de autenticação precisa ser revista (ver §6, risco R-01).
 
 ## 2. Estrutura de pastas proposta
 
@@ -115,7 +129,7 @@ Transições inválidas (ex.: Entregue → Em preparo) retornam `400`/`409`. Imp
 
 | Tabela | Campos principais | Observações |
 |--------|-------------------|-------------|
-| Identity (`AspNetUsers`, `AspNetRoles`, `AspNetUserRoles`…) | id, email, password_hash, nome, telefone | hash gerado pelo Identity |
+| Identity (`AspNetUsers`, `AspNetRoles`, `AspNetUserRoles`…) | id, email, password_hash, nome, **cpf** (11 dígitos, sem máscara), telefone | hash gerado pelo Identity; **UNIQUE** em cpf e email |
 | `produtos` | id PK, nome, descricao, categoria, preco DECIMAL(10,2), imagem_url, ativo, criado_em | CHECK preco > 0; índice em nome/categoria |
 | `enderecos` | id PK, usuario_id FK, cep, logradouro, numero, complemento, bairro, cidade, uf | índice em usuario_id |
 | `pedidos` | id PK, usuario_id FK, status, subtotal, taxa_entrega, total, forma_pagamento, entrega_* (snapshot), criado_em, atualizado_em | índice em (usuario_id, criado_em) e status |
@@ -125,7 +139,11 @@ O DER definitivo será produzido na Fase 2.
 
 ## 6. Autenticação e segurança
 
-**Estratégia:** ASP.NET Core Identity com **cookie de autenticação** (não JWT). Motivos: senhas com hash pelo Identity, cookie `HttpOnly` não é lido por JavaScript (protege contra roubo por XSS), e é mais simples de explicar.
+**Estratégia preferida:** ASP.NET Core Identity com **cookie de autenticação**. Motivos: senhas com hash pelo Identity, o cookie `HttpOnly` não é lido por JavaScript (protege contra roubo por XSS) e é mais simples de explicar.
+
+**Condição (risco R-01):** o cookie só funciona bem se front e API estiverem no **mesmo site** (mesmo domínio ou subdomínios do mesmo domínio). Se o front ficar no servidor do FTP e a API em um domínio de outro serviço, o cookie passa a ser "de terceiros" e muitos navegadores o bloqueiam. Nesse caso a alternativa é usar o **token Bearer do próprio Identity** (`AddIdentityApiEndpoints`, .NET 8+), enviado no cabeçalho `Authorization`. O token fica em `sessionStorage` e a proteção contra XSS vem do uso de `textContent`. A decisão final será tomada quando P-13/P-23 forem respondidas, **antes** de implementar a autenticação.
+
+**Dados pessoais (R-02):** o CPF é validado no servidor (dígitos verificadores) e armazenado só com dígitos. Nunca aparece em logs nem em mensagens de erro. Nos dados de demonstração, usar apenas CPFs fictícios.
 
 | Cuidado | Como |
 |---------|------|
@@ -144,8 +162,11 @@ O DER definitivo será produzido na Fase 2.
 
 ## 7. Front-End
 
-- Páginas HTML separadas; cada uma carrega `tema.js`, `api.js` e seu script.
+- Páginas HTML separadas; cada uma carrega `config.js`, `tema.js`, `api.js` e seu script.
+- **Login e cadastro em modal** com o elemento nativo `<dialog>` (`showModal()`): foco preso dentro do modal, fecha com Esc e devolve o foco ao botão que o abriu. Os botões da navbar abrem os modais em qualquer página (`js/modais-auth.js`). Opcionalmente, `?entrar` na URL abre o login direto, para redirecionar quem tenta finalizar o pedido sem estar logado.
+- Máscaras: Nome (letras/acentos/espaço/'/-), CPF `000.000.000-00`, Telefone `(00) 00000-0000`, CEP `00000-000`, UF (2 letras maiúsculas). O valor é enviado **sem máscara** à API, que valida de novo.
 - Temas via variáveis CSS (`:root` e `[data-theme="dark"]`), preferência em `localStorage`, padrão segue `prefers-color-scheme`.
 - Carrinho guardado em `localStorage` com **apenas** `produtoId` e `quantidade`; preços exibidos são buscados da API e o total oficial vem da resposta do pedido.
 - Máscaras simples em JS puro (telefone, CEP); campos numéricos com `inputmode="numeric"` e filtragem que não bloqueia teclas de navegação/edição.
-- Visual final só após o protótipo Figma aprovado (P-09, P-17).
+- Figma é **opcional** (P-09 respondida). Recomenda-se um rascunho rápido de paleta, logo e 2–3 telas antes do visual final, para alinhar a dupla.
+- Sem erros no console em produção: caminhos relativos, `favicon` presente, nenhum `console.error` em fluxo normal (exigência do EVID-05).

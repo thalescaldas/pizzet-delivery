@@ -18,17 +18,18 @@ Fonte: `CLAUDE.md` (enunciado repassado pela equipe). Nada aqui foi inventado; o
 | ID | Requisito | Origem | Estado | Teste (plano-de-testes.md) |
 |----|-----------|--------|--------|------------------------------|
 | FE-01 | Home com apresentação, barra de navegação, botões de login e cadastro e rodapé | [C] | [ ] | T-FE-01 |
-| FE-02 | Página de login | [C] | [ ] | T-AUTH-02 |
-| FE-03 | Página de cadastro (preferir página própria a modal) | [C] / forma [D] | [ ] | T-AUTH-01 |
+| FE-02 | Login, preferencialmente em **modal** acessível (professor: "é melhor modal") | [C] | [ ] | T-AUTH-02, T-UX-06 |
+| FE-03 | Cadastro, preferencialmente em **modal** acessível | [C] | [ ] | T-AUTH-01, T-UX-06 |
 | FE-04 | Catálogo de produtos | [C] | [ ] | T-CAT-01 |
 | FE-05 | Busca de produtos | [C] | [ ] | T-CAT-02 |
 | FE-06 | Carrinho de compras | [C] | [ ] | T-CAR-01..03 |
 | FE-07 | Página de pedidos realizados | [C] | [ ] | T-PED-03 |
 | FE-08 | Perfil / dados do usuário | [C] | [ ] | T-PER-01 |
 | FE-09 | Layout responsivo em celular | [C] | [ ] | T-UX-01 |
-| FE-10 | Protótipo no Figma **antes** de codificar o visual | [C] | [ ] | T-UX-04 |
+| FE-10 | Protótipo no Figma: **opcional**, o professor disse que não precisa entregar. Recomendado um rascunho rápido. | [C] (opcional) | [ ] | T-UX-04 |
 | FE-11 | Somente HTML, CSS e JavaScript puros (sem frameworks) | [C] | [ ] | T-UX-05 |
-| FE-12 | Máscaras de formatação nos campos aplicáveis do cadastro (ex.: telefone, CPF\*, CEP) | [C] / campos [P] | [ ] | T-VAL-01 |
+| FE-12 | Máscaras em "basicamente todos os campos" do cadastro: **Nome, CPF, Telefone, CEP** (e demais aplicáveis: UF, número) | [C] | [ ] | T-VAL-01 |
+| FE-12a | CPF coletado no cadastro, com validação dos dígitos verificadores no servidor e unicidade | [C] (P-10) | [ ] | T-VAL-04 |
 | FE-13 | Campos numéricos aceitam apenas números, sem prejudicar acessibilidade/edição | [C] | [ ] | T-VAL-02 |
 | FE-14 | Modo claro/escuro | [C] | [ ] | T-UX-02 |
 | FE-15 | Preferência de tema persistida localmente (`localStorage`) | [D] | [ ] | T-UX-02 |
@@ -37,7 +38,7 @@ Fonte: `CLAUDE.md` (enunciado repassado pela equipe). Nada aqui foi inventado; o
 | FE-18 | Tela de acompanhamento de status do pedido (único extra aprovado) | [D] | [ ] | T-PED-04 |
 | FE-19 | Telas administrativas: CRUD de produtos e gestão de status de pedidos | [D] (necessário para CS-03/CS-10) | [ ] | T-ADM-01..03 |
 
-\* Coletar CPF **não** é requisito confirmado; só incluir se a equipe decidir (ver pendências). Minimizar dados pessoais.
+Sobre as máscaras do FE-12: em **Nome**, "máscara" significa aceitar apenas letras (com acentos), espaço, apóstrofo e hífen, removendo espaços duplicados. Não haverá capitalização automática, que erraria nomes como "da Silva". Esta interpretação é da equipe.
 
 ## 2. Lógica e Programação (C#)
 
@@ -71,12 +72,30 @@ Fonte: `CLAUDE.md` (enunciado repassado pela equipe). Nada aqui foi inventado; o
 | DB-08 | Procedures, views, triggers ou relatórios | [P] | [ ] | — |
 | DB-09 | Dados de demonstração sem segredos | [D] | [ ] | T-DB-01 |
 
-## 4. Entrega e hospedagem
+## 4. Deploy (atividade "Trabalho Interdisciplinar", Prof. Mauricio, 3 pontos)
+
+Fonte: documento "Evidências_Deploy_App_FileZilla". Roteiro detalhado em [`deploy.md`](deploy.md).
+
+| ID | Requisito | Origem | Estado | Teste |
+|----|-----------|--------|--------|-------|
+| DEP-01 | Publicar a aplicação via **FileZilla (FTP/SFTP)** | [C] | [ ] | T-DEP-01..04 |
+| DEP-02 | Cabeçalho de identificação preenchido (sistema, versão, ambiente, host, diretório, data/hora, responsável, status) | [C] | [ ] | revisão |
+| DEP-03 | EVID-01: print da conexão com log "Autenticado" e "Listagem do diretório concluída" destacado em vermelho, senha oculta | [C] | [ ] | T-DEP-01 |
+| DEP-04 | EVID-02: print local × remoto pré-upload | [C] | [ ] | T-DEP-02 |
+| DEP-05 | EVID-03: print da fila com **0 falhas** (destacado em vermelho) e fila vazia | [C] | [ ] | T-DEP-03 |
+| DEP-06 | EVID-04: print da listagem remota com data/hora do deploy e permissões 0755/0644 | [C] | [ ] | T-DEP-04 |
+| DEP-07 | EVID-05: URL pública com **HTTPS válido**, documento **200 OK**, console **sem erros 404/500/CORS** | [C] | [ ] | T-DEP-05 |
+| DEP-08 | Prints com interface completa, data/hora e barras de status legíveis; dados sensíveis ocultos | [C] | [ ] | revisão |
+| DEP-09 | Checklist: backup prévio, config de produção preservada, histórico de logins limpo, cache limpo | [C] | [ ] | revisão |
+| DEP-10 | Prazo e formato de entrega da atividade de deploy | [P] (P-24) | [ ] | — |
+
+## 5. Entrega, apresentação e hospedagem
 
 | ID | Requisito | Origem | Estado |
 |----|-----------|--------|--------|
 | EN-01 | Entrega até 15/11/2026 | [C] | [ ] |
-| EN-02 | Publicação via FTP do professor (dados ainda não fornecidos) | [P] | [ ] |
-| EN-03 | Hospedagem da API .NET e do MySQL | [P] | [ ] |
+| EN-02 | Dados do FTP do professor (ainda não fornecidos) | [P] (P-12) | [ ] |
+| EN-03 | Hospedagem da API .NET e do MySQL com HTTPS | [P] (P-13, P-22, P-23) | [ ] |
+| EN-06 | Apresentação ao vivo + leitura de código + **perguntas individuais**: os dois integrantes explicam todo o sistema | [C] | [ ] |
 | EN-04 | README com instalação, configuração, execução e roteiro de demonstração | [D] | [~] |
 | EN-05 | Nenhum segredo versionado | [D] | [~] (`.gitignore` criado) |
