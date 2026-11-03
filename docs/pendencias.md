@@ -13,6 +13,7 @@ Questões que **não podem ser decididas pela equipe** sem confirmação. Ao obt
 | P-11 | Login/cadastro: modal ou página? | **Pode ser separado, mas é melhor modal.** | 03/11/2026, relato da equipe | Login e cadastro serão **modais acessíveis** (`<dialog>`). |
 | P-19 | Como será a avaliação? | **Apresentação ao vivo + leitura de código + perguntas individuais.** | 03/11/2026, relato da equipe | Os dois integrantes precisam conseguir explicar todo o código; priorizar simplicidade. |
 | P-20 | Há referência específica para responsividade/acessibilidade? | **Não.** | 03/11/2026, relato da equipe | Seguir boas práticas básicas já listadas (FE-09, FE-16). |
+| P-05 / P-08 | DER é obrigatório? Formato? Script SQL puro é aceito? | Prof. Thiago Barbosa Mello Teixeira Vivas: "O DER é apenas para terem uma base de projeto, pode entregar apenas com os scripts, que vão ser completados pelo C#". **DER não é obrigatório**; a entrega são os **scripts SQL**, com os dados preenchidos pela aplicação C#. | 03/11/2026, e-mail | Abordagem atual confirmada (script SQL = fonte da verdade). `der.md` fica como apoio. |
 | P-21 | Como comprovar o deploy? | Documento **"Evidências_Deploy_App_FileZilla"** (Prof. Mauricio de Souza Fernandes, atividade "Trabalho Interdisciplinar", 3 pontos, publicada em 23/10): 5 prints padronizados via FileZilla + cabeçalho + checklist. | 03/11/2026, documento enviado | Novo grupo de requisitos DEP-01..10; roteiro em `deploy.md`. |
 
 ## Professores — Lógica e Programação (C#)
@@ -28,10 +29,8 @@ Questões que **não podem ser decididas pela equipe** sem confirmação. Ao obt
 
 | # | Pergunta | Impacto | Prioridade | Resposta |
 |---|----------|---------|------------|----------|
-| P-05 | O DER é obrigatório? Em qual ferramenta/formato? | Entregável | Alta | — |
 | P-06 | Modelo conceitual/lógico também é exigido? | Entregável | Média | — |
-| P-07 | Consultas especiais (JOIN, GROUP BY, subconsultas), views, procedures, triggers ou relatórios são obrigatórios? | Escopo de `database/` | Alta | — |
-| P-08 | Script SQL puro executável no Workbench, ou migrações EF Core são aceitas? | Fonte da verdade do banco | **BLOQUEANTE** (com P-04) | — |
+| P-07 | Consultas especiais (JOIN, GROUP BY, subconsultas), views, procedures, triggers ou relatórios são obrigatórios? | Escopo de `database/` | Alta | **Não respondida** no e-mail de 03/11 (o professor tratou só do DER). Reperguntar. |
 
 ## Hospedagem e deploy (atividade do Prof. Mauricio)
 

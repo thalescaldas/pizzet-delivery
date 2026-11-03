@@ -64,8 +64,8 @@ Sobre as máscaras do FE-12: em **Nome**, "máscara" significa aceitar apenas le
 |----|-----------|--------|--------|-------|
 | DB-01 | MySQL 8 | [C] versão [D] | [x] testado no 8.0.46 | T-DB-01 |
 | DB-02 | Chaves primárias, estrangeiras, índices e restrições (NOT NULL, UNIQUE, CHECK) | [C] | [x] testado (T-DB-01/02) | T-DB-02 |
-| DB-03 | Script SQL versionado no repositório (`database/`) | [C] | [x] testado (T-DB-01/02) | T-DB-01 |
-| DB-04 | DER (diagrama entidade-relacionamento) | [D] — obrigatoriedade [P] | [~] `database/der.md` | revisão |
+| DB-03 | Script SQL versionado no repositório (`database/`). **É o entregável de BD**, com dados completados pelo C# | [C] | [x] testado (T-DB-01/02) | T-DB-01 |
+| DB-04 | DER: **não obrigatório**, só base de projeto (Prof. Thiago, 03/11) | [C] opcional | [x] `database/der.md` | revisão |
 | DB-05 | Consultas de demonstração | [D] — obrigatoriedade/tipo [P] | [ ] | T-DB-03 |
 | DB-06 | Tabelas: usuários, produtos, endereços, pedidos, itens_pedido (+ tabelas do Identity) | [D] | [x] testado (T-DB-01/02) | T-DB-02 |
 | DB-07 | Snapshot do endereço de entrega e do preço unitário no pedido | [D] | [~] colunas criadas; uso depende da API | T-DB-04 |
