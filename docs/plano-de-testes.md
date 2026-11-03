@@ -72,4 +72,9 @@ Pré-condições gerais: MySQL 8 rodando com o script de `database/`; API em exe
 
 | Teste | Data | Responsável | Resultado | Evidência |
 |-------|------|-------------|-----------|-----------|
-| — | — | — | Nenhum teste executado ainda (sistema não implementado) | — |
+| T-DB-01 | 03/11/2026 | Claude (container em nuvem, MySQL 8.0.46) | ✅ `01_schema.sql` + `02_dados_demo.sql` executados sem erro, 2 vezes seguidas; 11 tabelas, 12 produtos (1 inativo), 2 papéis | saída do `mysql` na sessão |
+| T-DB-02 | 03/11/2026 | Claude (idem) | ✅ `99_testes_restricoes.sql`: 21 inserções/exclusões inválidas recusadas (CHECK, UNIQUE, FK, RESTRICT, coluna calculada) | idem |
+| T-DB-04 (parcial, só banco) | 03/11/2026 | Claude (idem) | ✅ alterar preço e apagar endereço não muda o pedido gravado | idem |
+| Busca sem acento (banco) | 03/11/2026 | Claude (idem) | ✅ após correção (`SET NAMES utf8mb4`): "lactea" encontra "Láctea" | idem |
+
+Observação: testes feitos no container de desenvolvimento, não nas máquinas da equipe. Recomenda-se repetir no MySQL Workbench.

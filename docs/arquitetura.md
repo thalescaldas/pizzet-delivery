@@ -135,7 +135,13 @@ Transições inválidas (ex.: Entregue → Em preparo) retornam `400`/`409`. Imp
 | `pedidos` | id PK, usuario_id FK, status, subtotal, taxa_entrega, total, forma_pagamento, entrega_* (snapshot), criado_em, atualizado_em | índice em (usuario_id, criado_em) e status |
 | `itens_pedido` | id PK, pedido_id FK, produto_id FK, nome_produto (snapshot), preco_unitario, quantidade | CHECK quantidade > 0 |
 
-O DER definitivo será produzido na Fase 2.
+**Implementado em `database/01_schema.sql`** (DER em `database/der.md`). Detalhes que diferem da tabela acima:
+- Chaves `INT AUTO_INCREMENT`. Na API, o Identity será configurado com chave `int` (`IdentityUser<int>`).
+- Tabelas do Identity renomeadas: `usuarios`, `papeis`, `usuarios_papeis`, `usuarios_claims`, `papeis_claims`, `usuarios_logins`, `usuarios_tokens`. As colunas mantêm o nome do framework em snake_case (`password_hash`, `normalized_email`…). O telefone usa a coluna `phone_number` do Identity.
+- Enums gravados como texto: categoria `PIZZA_SALGADA | PIZZA_DOCE | BEBIDA`; status `RECEBIDO | EM_PREPARO | SAIU_PARA_ENTREGA | ENTREGUE | CANCELADO`; pagamento simulado `PIX | CARTAO | DINHEIRO`.
+- `itens_pedido.subtotal` é uma coluna calculada pelo MySQL (`STORED`), e `pedidos` tem um CHECK `total = subtotal + taxa_entrega`.
+
+**Persistência:** o script SQL é a fonte da verdade. O EF Core mapeia as tabelas existentes (`ToTable`, nomes de coluna em snake_case), **sem migrações**. Rever se P-04/P-08 forem respondidas de outra forma.
 
 ## 6. Autenticação e segurança
 
