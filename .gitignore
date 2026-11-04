@@ -66,3 +66,6 @@ mysql-data/
 
 # ===== Node (somente se usado para ferramentas, não para o front) =====
 node_modules/
+
+# Saída dos testes automatizados
+tests/saida/

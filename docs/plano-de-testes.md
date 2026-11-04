@@ -79,5 +79,17 @@ Pré-condições gerais: MySQL 8 rodando com o script de `database/`; API em exe
 | T-BLD-01 (parcial) | 03/11/2026 | Claude (container, .NET 8.0.133) | ✅ `dotnet build -warnaserror`: 0 erros, 0 avisos; `dotnet run` sobe a API | saída na sessão |
 | T-CAT-01 (só API) | 03/11/2026 | Claude (idem) | ✅ `GET /api/produtos` devolve 11 ativos e não inclui o inativo; `/api/produtos/12` (inativo) → 404; `/999` → 404 | idem |
 | T-CAT-02 (só API) | 03/11/2026 | Claude (idem) | ✅ "lactea" e "CALABRESA" encontram os produtos; `' OR 1=1 --` e `%` → lista vazia (sem injeção); busca com 101 caracteres → 400; categoria inválida → 400 | idem |
+| T-AUTH-01..04, T-SEG-01 | 04/11/2026 | Claude (container, .NET 8 + MySQL 8.0.46 + Chromium) | ✅ cadastro (entra logado, papel Cliente), login, senha errada com mensagem genérica, e-mail/CPF duplicados recusados, cookie `HttpOnly` + `SameSite=Lax` invisível ao JS, nada sensível no localStorage | `tests/e2e.js`, `tests/api_test.sh` |
+| T-ADM-01..03 | 04/11/2026 | idem | ✅ admin cria, edita, desativa e reativa produto pela interface; nome duplicado → erro no campo; cliente recebe 403 na API e não vê o painel; admin muda status e transições inválidas são recusadas (409) | idem |
+| T-CAT-01/02 | 04/11/2026 | idem | ✅ catálogo vem da API (10 ativos, inativo oculto); busca "lactea" acha "Via Láctea"; filtro por categoria; mensagem de vazio | `tests/e2e.js` |
+| T-CAR-01..04 | 04/11/2026 | idem | ✅ carrinho persiste; preço adulterado no localStorage é corrigido; total gravado pelo servidor (R$ 121,60); produto inativo/qtde 0/pagamento inválido → 400 | `tests/e2e.js`, `tests/api_test.sh` |
+| T-PED-01..05, T-DB-04 | 04/11/2026 | idem | ✅ pedido registrado; histórico; acompanhamento mostra status atualizado pelo admin; cliente B recebe 404 no pedido/endereço do cliente A; pular etapa e cancelar após "Saiu para entrega" → 409 | idem |
+| T-PER-01/02 | 04/11/2026 | idem | ✅ perfil edita nome/telefone, CPF mascarado; endereço criado no checkout aparece no perfil | idem |
+| T-VAL-01..04 | 04/11/2026 | idem | ✅ máscaras de nome, CPF, telefone, CEP, UF e número; CPF inválido recusado no front e na API; erros por campo com `aria-invalid` | idem |
+| T-UX-01 | 04/11/2026 | idem | ✅ sem rolagem horizontal em 320/360/390/768/1024/1440 px em 9 páginas + modal + menu mobile | `tests/responsivo.js` |
+| T-UX-02 | 04/11/2026 | idem | ✅ tema claro persiste após recarregar | `tests/e2e.js` |
+| T-UX-03 (parcial) | 04/11/2026 | idem | ✅ foco vai para o modal, Tab preso, Esc fecha; ⚠️ contraste não medido com ferramenta | idem |
+| T-DEP-05 (só local) | 04/11/2026 | idem | ✅ visitante anônimo: documento 200 e console/rede sem erros em 5 páginas + troca de tema (ainda sem HTTPS público) | `tests/console_limpo.js` |
+| Estabilidade | 04/11/2026 | idem | ✅ `tests/e2e.js` 5 execuções seguidas: 50/50 | — |
 
 Observação: testes feitos no container de desenvolvimento, não nas máquinas da equipe. Recomenda-se repetir no MySQL Workbench.

@@ -138,14 +138,16 @@ Transições inválidas (ex.: Entregue → Em preparo) retornam `400`/`409`. Imp
 **Implementado em `database/01_schema.sql`** (DER em `database/der.md`). Detalhes que diferem da tabela acima:
 - Chaves `INT AUTO_INCREMENT`. Na API, o Identity será configurado com chave `int` (`IdentityUser<int>`).
 - Tabelas do Identity renomeadas: `usuarios`, `papeis`, `usuarios_papeis`, `usuarios_claims`, `papeis_claims`, `usuarios_logins`, `usuarios_tokens`. As colunas mantêm o nome do framework em snake_case (`password_hash`, `normalized_email`…). O telefone usa a coluna `phone_number` do Identity.
-- Enums gravados como texto: categoria `PIZZA_SALGADA | PIZZA_DOCE | BEBIDA`; status `RECEBIDO | EM_PREPARO | SAIU_PARA_ENTREGA | ENTREGUE | CANCELADO`; pagamento simulado `PIX | CARTAO | DINHEIRO`.
+- Enums gravados como texto: categoria `TRADICIONAL | ESPECIAL | PREMIUM | DOCE | BEBIDA` (as do protótipo V2); status `RECEBIDO | EM_PREPARO | SAIU_PARA_ENTREGA | ENTREGUE | CANCELADO`; pagamento simulado `PIX | CARTAO | DINHEIRO`.
 - `itens_pedido.subtotal` é uma coluna calculada pelo MySQL (`STORED`), e `pedidos` tem um CHECK `total = subtotal + taxa_entrega`.
 
 **Persistência:** o script SQL é a fonte da verdade. O EF Core mapeia as tabelas existentes (`ToTable`, nomes de coluna em snake_case), **sem migrações**. Rever se P-04/P-08 forem respondidas de outra forma.
 
 ## 6. Autenticação e segurança
 
-**Estratégia preferida:** ASP.NET Core Identity com **cookie de autenticação**. Motivos: senhas com hash pelo Identity, o cookie `HttpOnly` não é lido por JavaScript (protege contra roubo por XSS) e é mais simples de explicar.
+**Implementado (04/11):** ASP.NET Core Identity com **cookie de autenticação** (`PizzET.Auth`, HttpOnly, SameSite=Lax), a API servindo o Front-End na mesma origem e proteção CSRF pelo cabeçalho obrigatório `X-PizzET-Csrf` em toda requisição que altera dados (ver `Infra/ProtecaoCsrfMiddleware.cs`). `/api/auth/eu` responde 204 para visitante anônimo, para não gerar erro no console (exigência do Print 5).
+
+**Estratégia:** ASP.NET Core Identity com **cookie de autenticação**. Motivos: senhas com hash pelo Identity, o cookie `HttpOnly` não é lido por JavaScript (protege contra roubo por XSS) e é mais simples de explicar.
 
 **Condição (risco R-01):** o cookie só funciona bem se front e API estiverem no **mesmo site** (mesmo domínio ou subdomínios do mesmo domínio). Se o front ficar no servidor do FTP e a API em um domínio de outro serviço, o cookie passa a ser "de terceiros" e muitos navegadores o bloqueiam. Nesse caso a alternativa é usar o **token Bearer do próprio Identity** (`AddIdentityApiEndpoints`, .NET 8+), enviado no cabeçalho `Authorization`. O token fica em `sessionStorage` e a proteção contra XSS vem do uso de `textContent`. A decisão final será tomada quando P-13/P-23 forem respondidas, **antes** de implementar a autenticação.
 
