@@ -69,8 +69,8 @@ pizzet-delivery/
 └── database/
     ├── 01_schema.sql         # criação de tabelas, PK, FK, índices, restrições
     ├── 02_dados_demo.sql     # produtos de exemplo (sem usuários/senhas)
-    ├── 03_consultas_demo.sql # consultas para apresentação
-    └── der/                  # DER exportado
+    ├── 99_testes_restricoes.sql # testes opcionais das restrições
+    └── der.md                # DER (apoio; não obrigatório)
 ```
 
 **Padrão escolhido: Controllers** (em vez de Minimal APIs). Motivo: organização por classe é mais fácil de explicar e conecta diretamente com o conteúdo de orientação a objetos.

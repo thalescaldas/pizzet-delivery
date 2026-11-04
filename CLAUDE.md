@@ -41,7 +41,7 @@ Construir um sistema web acadêmico de delivery de pizzas, com interface espacia
 - API C# integrada ao Front-End e ao MySQL.
 - CRUD real de produtos (criar, ler, atualizar e desativar/excluir logicamente), protegido para administradores.
 - Empregar, onde fizer sentido, classes, métodos, listas, condicionais, laços e orientação a objetos; não forçar vetores/matrizes artificiais no fluxo de produção. Registrar exemplos didáticos separados se o professor exigir.
-- MySQL com PK, FK, índices, restrições e script SQL versionado. Criar DER e consultas de demonstração.
+- MySQL com PK, FK, índices, restrições e script SQL versionado. Prof. de BD confirmou: a entrega são os **scripts**; **basta a criação das tabelas com chaves e restrições**. DER é só base de projeto (não obrigatório); views, procedures, triggers e consultas especiais **não** são exigidas.
 - Decisão da equipe (03/11/2026): os scripts em `database/` são a **fonte da verdade** do banco; o EF Core mapeia as tabelas existentes, **sem migrações**. Rever se o professor exigir outra abordagem.
 - Modelo inicial: usuários, produtos, endereços, pedidos e itens_pedido; usar tabelas adicionais do Identity quando necessário.
 - Guardar no pedido um snapshot do endereço de entrega e do preço unitário de cada item.
@@ -95,6 +95,5 @@ Fase 1: levantamento final, árvore de arquivos, documentação e ambiente; Fase
 ## Pendências
 Lista completa e respostas em `docs/pendencias.md`. Principais em aberto:
 - Confirmar com os professores a adequação de ASP.NET Core Web API + MySQL, uso de EF Core e se exigem tópicos específicos de C# ou SQL.
-- Confirmar se DER, consultas especiais, views, procedures ou relatórios são obrigatórios.
 - Confirmar dados do FTP/SFTP, HTTPS, e onde a API e o MySQL serão hospedados; prazo da atividade de deploy.
 - Definir integrantes, divisão de tarefas e responsável técnico do deploy.

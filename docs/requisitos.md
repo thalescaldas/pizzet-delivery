@@ -66,10 +66,10 @@ Sobre as máscaras do FE-12: em **Nome**, "máscara" significa aceitar apenas le
 | DB-02 | Chaves primárias, estrangeiras, índices e restrições (NOT NULL, UNIQUE, CHECK) | [C] | [x] testado (T-DB-01/02) | T-DB-02 |
 | DB-03 | Script SQL versionado no repositório (`database/`). **É o entregável de BD**, com dados completados pelo C# | [C] | [x] testado (T-DB-01/02) | T-DB-01 |
 | DB-04 | DER: **não obrigatório**, só base de projeto (Prof. Thiago, 03/11) | [C] opcional | [x] `database/der.md` | revisão |
-| DB-05 | Consultas de demonstração | [D] — obrigatoriedade/tipo [P] | [ ] | T-DB-03 |
+| DB-05 | Consultas de demonstração: **não exigidas** (Prof. Thiago, 04/11) | [C] não exigido | — | — |
 | DB-06 | Tabelas: usuários, produtos, endereços, pedidos, itens_pedido (+ tabelas do Identity) | [D] | [x] testado (T-DB-01/02) | T-DB-02 |
 | DB-07 | Snapshot do endereço de entrega e do preço unitário no pedido | [D] | [~] colunas criadas; uso depende da API | T-DB-04 |
-| DB-08 | Procedures, views, triggers ou relatórios | [P] | [ ] | — |
+| DB-08 | Procedures, views, triggers ou relatórios: **não exigidos** (Prof. Thiago, 04/11) | [C] não exigido | — | — |
 | DB-09 | Dados de demonstração sem segredos | [D] | [~] `02_dados_demo.sql` | T-DB-01 |
 
 ## 4. Deploy (atividade "Trabalho Interdisciplinar", Prof. Mauricio, 3 pontos)

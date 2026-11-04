@@ -62,7 +62,7 @@ Pré-condições gerais: MySQL 8 rodando com o script de `database/`; API em exe
 ## Banco e integração (DB-01..09, CS-02)
 - **T-DB-01 Script reproduzível** — em um MySQL 8 vazio, executar os scripts de `database/` na ordem → sem erros; nenhum segredo nos arquivos.
 - **T-DB-02 Restrições** — inserir produto com preço negativo, item com pedido inexistente ou e-mail duplicado → banco recusa.
-- **T-DB-03 Consultas de demonstração** — executar `03_consultas_demo.sql` → resultados coerentes com os dados.
+- **T-DB-03 Consultas de demonstração** — não exigido pelo professor (04/11); dispensado.
 - **T-INT-01 Ponta a ponta** — fluxo completo: Home → catálogo/busca → carrinho → cadastro/login → endereço → checkout → acompanhamento → histórico/perfil.
 
 ## Build e execução
