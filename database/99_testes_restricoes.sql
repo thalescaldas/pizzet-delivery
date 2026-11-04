@@ -17,15 +17,15 @@ INSERT INTO usuarios (nome, cpf, email, normalized_email, user_name, normalized_
 INSERT INTO usuarios (nome, email, normalized_email) VALUES ('Admin Seed','admin@teste.dev','ADMIN@TESTE.DEV');
 INSERT INTO usuarios_papeis VALUES (1,1),(2,2);
 INSERT INTO enderecos (usuario_id, cep, logradouro, numero, bairro, cidade, uf) VALUES (1,'70040010','Rua das Estrelas','42','Centro','Brasília','DF');
-INSERT INTO pedidos (usuario_id, forma_pagamento, subtotal, taxa_entrega, total, entrega_cep, entrega_logradouro, entrega_numero, entrega_bairro, entrega_cidade, entrega_uf) VALUES (1,'PIX',113.80,8.00,121.80,'70040010','Rua das Estrelas','42','Centro','Brasília','DF');
-INSERT INTO itens_pedido (pedido_id, produto_id, nome_produto, preco_unitario, quantidade) VALUES (1,1,'Margherita Marciana',49.90,2),(1,9,'Refrigerante 2L',14.00,1);
+INSERT INTO pedidos (usuario_id, forma_pagamento, subtotal, taxa_entrega, total, entrega_cep, entrega_logradouro, entrega_numero, entrega_bairro, entrega_cidade, entrega_uf) VALUES (1,'PIX',113.70,7.90,121.60,'70040010','Rua das Estrelas','42','Centro','Brasília','DF');
+INSERT INTO itens_pedido (pedido_id, produto_id, nome_produto, preco_unitario, quantidade) VALUES (1,1,'Marguerita Marciana',49.90,2),(1,8,'Refrigerante 2L',13.90,1);
 SELECT 'subtotais calculados' AS t, nome_produto, subtotal FROM itens_pedido;
 SELECT 'busca sem acento' AS t, nome FROM produtos WHERE nome LIKE '%lactea%';
 -- ===== INVÁLIDOS (cada um deve falhar) =====
 SELECT '--- inválidos ---' AS t;
-INSERT INTO produtos (nome, categoria, preco) VALUES ('Preco Negativo','PIZZA_SALGADA',-5);
+INSERT INTO produtos (nome, categoria, preco) VALUES ('Preco Negativo','TRADICIONAL',-5);
 INSERT INTO produtos (nome, categoria, preco) VALUES ('Categoria Errada','SOBREMESA',10);
-INSERT INTO produtos (nome, categoria, preco) VALUES ('Margherita Marciana','PIZZA_SALGADA',10);
+INSERT INTO produtos (nome, categoria, preco) VALUES ('Marguerita Marciana','TRADICIONAL',10);
 INSERT INTO usuarios (nome, cpf, email, normalized_email) VALUES ('Cpf Letras','1234567890A','x@t.dev','X@T.DEV');
 INSERT INTO usuarios (nome, cpf, email, normalized_email) VALUES ('Cpf Duplicado','52998224725','y@t.dev','Y@T.DEV');
 INSERT INTO usuarios (nome, email, normalized_email) VALUES ('Email Duplicado','ana@teste.dev','ANA@TESTE.DEV');

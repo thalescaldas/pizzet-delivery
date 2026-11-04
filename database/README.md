@@ -5,7 +5,7 @@ Scripts do banco MySQL do PizzET. Estes arquivos são a **fonte da verdade** do 
 | Arquivo | Conteúdo |
 |---------|----------|
 | `01_schema.sql` | Cria o banco `pizzet` e todas as tabelas com PK, FK, índices e CHECKs. **Recria do zero** (DROP TABLE). |
-| `02_dados_demo.sql` | Papéis (Cliente, Administrador) e 12 produtos de exemplo, sendo 1 inativo. Sem usuários nem senhas. |
+| `02_dados_demo.sql` | Papéis (Cliente, Administrador) e 11 produtos do protótipo V2 (com imagens em `frontend/assets/`), sendo 1 inativo. Sem usuários nem senhas. |
 | `99_testes_restricoes.sql` | Testes das restrições (insere dados fictícios; só para banco de teste). |
 | `der.md` | DER (Mermaid) e explicação das relações. |
 

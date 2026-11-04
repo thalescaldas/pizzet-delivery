@@ -1,12 +1,14 @@
 using Microsoft.AspNetCore.Mvc;
 using PizzET.Api.Domain;
 using PizzET.Api.Dtos;
+using PizzET.Api.Infra;
 using PizzET.Api.Services;
 
 namespace PizzET.Api.Controllers;
 
 /// <summary>
 /// Endpoints PÚBLICOS do cardápio. Qualquer visitante pode consultar.
+/// O CRUD de produtos fica no AdminController (somente administradores).
 /// </summary>
 [ApiController]
 [Route("api/produtos")]
@@ -21,7 +23,7 @@ public class ProdutosController : ControllerBase
     }
 
     /// <summary>
-    /// GET /api/produtos?busca=marg&amp;categoria=PIZZA_SALGADA
+    /// GET /api/produtos?busca=marg&amp;categoria=TRADICIONAL
     /// Ambos os parâmetros são opcionais.
     /// </summary>
     [HttpGet]
@@ -31,23 +33,20 @@ public class ProdutosController : ControllerBase
     {
         if (busca != null && busca.Length > TamanhoMaximoBusca)
         {
-            ModelState.AddModelError("busca", $"A busca pode ter no máximo {TamanhoMaximoBusca} caracteres.");
-            return ValidationProblem(ModelState);
+            throw new ErroDeNegocio($"A busca pode ter no máximo {TamanhoMaximoBusca} caracteres.", campo: "busca");
         }
 
         CategoriaProduto? categoriaFiltro = null;
         if (!string.IsNullOrWhiteSpace(categoria))
         {
-            if (!CategoriaProdutoTexto.TentarConverter(categoria, out CategoriaProduto convertida))
+            if (!TextoEnum.TentarConverter(categoria, out CategoriaProduto convertida))
             {
-                ModelState.AddModelError("categoria", "Use PIZZA_SALGADA, PIZZA_DOCE ou BEBIDA.");
-                return ValidationProblem(ModelState);
+                throw new ErroDeNegocio($"Categoria inválida. Use: {TextoEnum.Opcoes<CategoriaProduto>()}.", campo: "categoria");
             }
             categoriaFiltro = convertida;
         }
 
-        List<ProdutoResposta> produtos = await _produtoService.ListarAtivosAsync(busca, categoriaFiltro);
-        return Ok(produtos);
+        return Ok(await _produtoService.ListarAtivosAsync(busca, categoriaFiltro));
     }
 
     /// <summary>GET /api/produtos/5</summary>
@@ -57,7 +56,7 @@ public class ProdutosController : ControllerBase
         ProdutoResposta? produto = await _produtoService.ObterAtivoAsync(id);
         if (produto == null)
         {
-            return NotFound();
+            return NotFound(new { title = "Produto não encontrado." });
         }
         return Ok(produto);
     }

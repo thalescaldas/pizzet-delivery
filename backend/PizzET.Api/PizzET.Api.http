@@ -1,21 +1,56 @@
 # Requisições de teste (VS Code com extensão REST Client, ou Visual Studio / Rider).
+# O cookie de login é guardado automaticamente entre as requisições.
 @api = http://localhost:5039
 
 ### Lista todos os produtos ativos
 GET {{api}}/api/produtos
-Accept: application/json
 
 ### Busca por texto (ignora acentos e maiúsculas)
 GET {{api}}/api/produtos?busca=lactea
 
-### Filtra por categoria
+### Filtra por categoria (TRADICIONAL, ESPECIAL, PREMIUM, DOCE, BEBIDA)
 GET {{api}}/api/produtos?categoria=BEBIDA
 
-### Categoria inválida -> 400
-GET {{api}}/api/produtos?categoria=SOBREMESA
+### Produto inativo (Pizza Eclipse, id 11) -> 404
+GET {{api}}/api/produtos/11
 
-### Detalhe de um produto
-GET {{api}}/api/produtos/1
+### Cadastro (CPF fictício, válido apenas no algoritmo)
+POST {{api}}/api/auth/registrar
+Content-Type: application/json
+X-PizzET-Csrf: 1
 
-### Produto inativo (Pizza Eclipse, id 12) -> 404
-GET {{api}}/api/produtos/12
+{ "nome": "Ana Teste", "cpf": "529.982.247-25", "telefone": "(61) 99999-8888", "email": "ana@teste.dev", "senha": "senha1234" }
+
+### Login
+POST {{api}}/api/auth/entrar
+Content-Type: application/json
+X-PizzET-Csrf: 1
+
+{ "email": "ana@teste.dev", "senha": "senha1234" }
+
+### Quem está logado?
+GET {{api}}/api/auth/eu
+
+### Cadastrar endereço
+POST {{api}}/api/enderecos
+Content-Type: application/json
+X-PizzET-Csrf: 1
+
+{ "cep": "70040-010", "logradouro": "Rua das Estrelas", "numero": "42", "bairro": "Centro", "cidade": "Brasília", "uf": "DF" }
+
+### Criar pedido (o servidor ignora qualquer preço enviado e calcula o total)
+POST {{api}}/api/pedidos
+Content-Type: application/json
+X-PizzET-Csrf: 1
+
+{ "enderecoId": 1, "formaPagamento": "PIX", "itens": [ { "produtoId": 1, "quantidade": 2 }, { "produtoId": 8, "quantidade": 1 } ] }
+
+### Meus pedidos
+GET {{api}}/api/pedidos
+
+### Sem o cabeçalho X-PizzET-Csrf -> 400 (proteção CSRF)
+POST {{api}}/api/auth/sair
+
+### Sair
+POST {{api}}/api/auth/sair
+X-PizzET-Csrf: 1

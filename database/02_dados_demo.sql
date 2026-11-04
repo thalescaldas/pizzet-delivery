@@ -16,18 +16,18 @@ INSERT INTO papeis (name, normalized_name, concurrency_stamp) VALUES
     ('Cliente',       'CLIENTE',       UUID()),
     ('Administrador', 'ADMINISTRADOR', UUID());
 
--- Cardápio de exemplo (preços fictícios).
-INSERT INTO produtos (nome, descricao, categoria, preco, ativo) VALUES
-    ('Margherita Marciana',  'Molho de tomate, muçarela, tomate e manjericão fresco.',               'PIZZA_SALGADA', 49.90, TRUE),
-    ('Calabresa Cometa',     'Calabresa fatiada, cebola roxa, muçarela e orégano.',                  'PIZZA_SALGADA', 52.90, TRUE),
-    ('Frango Supernova',     'Frango desfiado, catupiry, milho e muçarela.',                         'PIZZA_SALGADA', 56.90, TRUE),
-    ('Quatro Queijos Lunar', 'Muçarela, provolone, parmesão e gorgonzola.',                          'PIZZA_SALGADA', 59.90, TRUE),
-    ('Portuguesa Orbital',   'Presunto, ovo, cebola, ervilha, azeitona e muçarela.',                 'PIZZA_SALGADA', 57.90, TRUE),
-    ('Vegana Nebulosa',      'Molho de tomate, abobrinha, berinjela, pimentão e queijo vegetal.',    'PIZZA_SALGADA', 58.90, TRUE),
-    ('Chocolate Buraco Negro','Chocolate ao leite com granulado.',                                    'PIZZA_DOCE',    46.90, TRUE),
-    ('Banana Via Láctea',    'Banana, canela, açúcar e leite condensado.',                           'PIZZA_DOCE',    44.90, TRUE),
-    ('Refrigerante 2L',      'Refrigerante sabor cola, garrafa de 2 litros.',                        'BEBIDA',        14.00, TRUE),
-    ('Suco Galáctico 500ml', 'Suco natural de laranja, 500 ml.',                                     'BEBIDA',        11.50, TRUE),
-    ('Água Cósmica 500ml',   'Água mineral sem gás, 500 ml.',                                        'BEBIDA',         5.00, TRUE),
+-- Cardápio de exemplo (preços fictícios). Nomes, preços e imagens seguem o
+-- protótipo do Front-End V2. imagem_url é relativa à pasta frontend/.
+INSERT INTO produtos (nome, descricao, categoria, preco, imagem_url, ativo) VALUES
+    ('Marguerita Marciana',    'Muçarela, tomate fresco, manjericão e molho artesanal.', 'TRADICIONAL', 49.90, 'assets/pizza-1.webp', TRUE),
+    ('Calabresa Cósmica',      'Calabresa especial, muçarela, cebola roxa e orégano.',   'TRADICIONAL', 49.90, 'assets/pizza-2.webp', TRUE),
+    ('Quatro Queijos Lunares', 'Muçarela, provolone, parmesão e gorgonzola.',            'ESPECIAL',    54.90, 'assets/pizza-3.webp', TRUE),
+    ('Frango Galáctico',       'Frango desfiado, muçarela, requeijão e milho.',          'ESPECIAL',    54.90, 'assets/pizza-4.webp', TRUE),
+    ('Pepperoni Plutoniano',   'Pepperoni crocante, muçarela e toque de pimenta.',       'PREMIUM',     67.90, 'assets/pizza-5.webp', TRUE),
+    ('Nutella Nebulosa',       'Chocolate com avelã, morangos e granulado.',             'DOCE',        59.90, 'assets/pizza-6.webp', TRUE),
+    ('Via Láctea',             'Chocolate branco e ao leite com confeitos.',             'DOCE',        59.90, 'assets/pizza-7.webp', TRUE),
+    ('Refrigerante 2L',        'Refrigerante gelado para sua missão.',                   'BEBIDA',      13.90, NULL, TRUE),
+    ('Suco Galáctico 500ml',   'Suco natural de laranja, 500 ml.',                       'BEBIDA',      11.50, NULL, TRUE),
+    ('Água Cósmica 500ml',     'Água mineral sem gás, 500 ml.',                          'BEBIDA',       5.00, NULL, TRUE),
     -- Produto INATIVO: não deve aparecer no catálogo público (teste T-CAT-01)
-    ('Pizza Eclipse',        'Sabor de edição limitada, fora do cardápio.',                          'PIZZA_SALGADA', 61.90, FALSE);
+    ('Pizza Eclipse',          'Sabor de edição limitada, fora do cardápio.',            'ESPECIAL',    61.90, NULL, FALSE);

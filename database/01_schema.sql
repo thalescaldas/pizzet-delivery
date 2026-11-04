@@ -169,7 +169,7 @@ CREATE TABLE produtos (
     CONSTRAINT pk_produtos PRIMARY KEY (id),
     CONSTRAINT uq_produtos_nome UNIQUE (nome),
     CONSTRAINT ck_produtos_preco     CHECK (preco > 0 AND preco <= 9999.99),
-    CONSTRAINT ck_produtos_categoria CHECK (categoria IN ('PIZZA_SALGADA', 'PIZZA_DOCE', 'BEBIDA')),
+    CONSTRAINT ck_produtos_categoria CHECK (categoria IN ('TRADICIONAL', 'ESPECIAL', 'PREMIUM', 'DOCE', 'BEBIDA')),
     CONSTRAINT ck_produtos_nome      CHECK (CHAR_LENGTH(TRIM(nome)) >= 2)
 ) ENGINE = InnoDB;
 

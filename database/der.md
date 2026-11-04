@@ -48,7 +48,7 @@ erDiagram
         INT id PK
         VARCHAR nome UK
         VARCHAR descricao
-        VARCHAR categoria "PIZZA_SALGADA / PIZZA_DOCE / BEBIDA"
+        VARCHAR categoria "TRADICIONAL / ESPECIAL / PREMIUM / DOCE / BEBIDA"
         DECIMAL preco "maior que 0"
         BOOLEAN ativo "exclusão lógica"
     }
