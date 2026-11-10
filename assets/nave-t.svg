@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66 60" fill="none">
+  <defs>
+    <linearGradient id="casco" x1="9" y1="17" x2="52" y2="32" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#d0ff98"/><stop offset=".5" stop-color="#79fa36"/><stop offset="1" stop-color="#42c940"/>
+    </linearGradient>
+    <linearGradient id="feixe" x1="36" y1="29" x2="26" y2="57" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#b6ff77"/><stop offset="1" stop-color="#62e730"/>
+    </linearGradient>
+  </defs>
+  <!-- O casco forma a barra do T; o feixe de luz forma sua haste. -->
+  <path d="M28 28h16L34 56H19Z" fill="url(#feixe)"/>
+  <path d="m33 33-7 20" stroke="#e4ffc8" stroke-width="1.5" opacity=".55"/>
+  <path d="M20 21c1-21 29-24 32-3" fill="#382050" stroke="#bc96ed" stroke-width="2"/>
+  <path d="M27 15c-1-10 17-11 17-1 0 6-5 11-8 11s-8-5-9-10Z" fill="#91ff4e"/>
+  <path d="M30 13q6 0 5 6-5-1-5-6Zm11-1q-6 1-4 7 5-2 4-7Z" fill="#171020"/>
+  <path d="M24 12q3-6 8-7" stroke="#e1c8ff" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M6 25c4 13 45 14 52-3" fill="url(#casco)"/>
+  <ellipse cx="33" cy="22" rx="29" ry="8" transform="rotate(-6 33 22)" fill="#20122d" stroke="url(#casco)" stroke-width="2.5"/>
+  <path d="M10 21c10-6 32-8 44-3" stroke="#c8ff9b" stroke-width="1.5" stroke-linecap="round"/>
+  <ellipse cx="17" cy="24" rx="3" ry="1.5" fill="#bd9ae8"/>
+  <ellipse cx="32" cy="25" rx="3" ry="1.5" fill="#a5ff60"/>
+  <ellipse cx="48" cy="22" rx="3" ry="1.5" fill="#bd9ae8"/>
+</svg>

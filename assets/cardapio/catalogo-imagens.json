@@ -1,0 +1,159 @@
+{
+  "modo": "ImageGen integrado; imagens ilustrativas fictícias",
+  "itens": [
+    {
+      "arquivo": "margherita-de-marte.png",
+      "nome": "Margherita de Marte",
+      "categoria": "pizza",
+      "detalhe": "Savory pizza with red tomato sauce, melted mozzarella, fresh red tomato slices and vibrant fresh basil leaves. No pepperoni, no other toppings.",
+      "prompt": "Use case: product-mockup. Asset: individual food product cutout for PizzET pizza delivery menu. Square 1024x1024 composition. Photorealistic premium studio food photography, consistent warm soft light from upper left. ONE whole round 35 cm Brazilian-style pizza, thick golden lightly blistered crust, slightly elevated three-quarter overhead angle approximately 55 degrees, entire pizza visible and centered with generous 10% transparent margin. Pizza fills about 80% of canvas width. No slice removed. Isolated on genuinely transparent alpha background, no plate, no board, no table, no props, no text, no watermark, no hands. Appetizing realistic food textures. Specific topping: Savory pizza with red tomato sauce, melted mozzarella, fresh red tomato slices and vibrant fresh basil leaves. No pepperoni, no other toppings."
+    },
+    {
+      "arquivo": "frango-cosmico.png",
+      "nome": "Frango Cósmico",
+      "categoria": "pizza",
+      "detalhe": "Savory Brazilian pizza with shredded cooked chicken, melted mozzarella, creamy white requeijao cheese swirls and yellow sweetcorn. No pepperoni.",
+      "prompt": "Use case: product-mockup. Asset: individual food product cutout for PizzET pizza delivery menu. Square 1024x1024 composition. Photorealistic premium studio food photography, consistent warm soft light from upper left. ONE whole round 35 cm Brazilian-style pizza, thick golden lightly blistered crust, slightly elevated three-quarter overhead angle approximately 55 degrees, entire pizza visible and centered with generous 10% transparent margin. Pizza fills about 80% of canvas width. No slice removed. Isolated on genuinely transparent alpha background, no plate, no board, no table, no props, no text, no watermark, no hands. Appetizing realistic food textures. Specific topping: Savory Brazilian pizza with shredded cooked chicken, melted mozzarella, creamy white requeijao cheese swirls and yellow sweetcorn. No pepperoni."
+    },
+    {
+      "arquivo": "portuguesa-orbital.png",
+      "nome": "Portuguesa Orbital",
+      "categoria": "pizza",
+      "detalhe": "Savory Brazilian portuguesa pizza with melted mozzarella, sliced ham, sliced hard boiled eggs, onion rings, thin bell pepper strips and black olives. No pepperoni.",
+      "prompt": "Use case: product-mockup. Asset: individual food product cutout for PizzET pizza delivery menu. Square 1024x1024 composition. Photorealistic premium studio food photography, consistent warm soft light from upper left. ONE whole round 35 cm Brazilian-style pizza, thick golden lightly blistered crust, slightly elevated three-quarter overhead angle approximately 55 degrees, entire pizza visible and centered with generous 10% transparent margin. Pizza fills about 80% of canvas width. No slice removed. Isolated on genuinely transparent alpha background, no plate, no board, no table, no props, no text, no watermark, no hands. Appetizing realistic food textures. Specific topping: Savory Brazilian portuguesa pizza with melted mozzarella, sliced ham, sliced hard boiled eggs, onion rings, thin bell pepper strips and black olives. No pepperoni."
+    },
+    {
+      "arquivo": "bacon-de-saturno.png",
+      "nome": "Bacon de Saturno",
+      "categoria": "pizza",
+      "detalhe": "Savory pizza with melted mozzarella, crispy browned bacon pieces, yellow sweetcorn and thin red onion rings. No pepperoni.",
+      "prompt": "Use case: product-mockup. Asset: individual food product cutout for PizzET pizza delivery menu. Square 1024x1024 composition. Photorealistic premium studio food photography, consistent warm soft light from upper left. ONE whole round 35 cm Brazilian-style pizza, thick golden lightly blistered crust, slightly elevated three-quarter overhead angle approximately 55 degrees, entire pizza visible and centered with generous 10% transparent margin. Pizza fills about 80% of canvas width. No slice removed. Isolated on genuinely transparent alpha background, no plate, no board, no table, no props, no text, no watermark, no hands. Appetizing realistic food textures. Specific topping: Savory pizza with melted mozzarella, crispy browned bacon pieces, yellow sweetcorn and thin red onion rings. No pepperoni."
+    },
+    {
+      "arquivo": "pepperoni-supernova.png",
+      "nome": "Pepperoni Supernova",
+      "categoria": "pizza",
+      "detalhe": "Savory pizza with red tomato sauce, melted mozzarella and abundant round red pepperoni slices with crisp curled edges. No basil or other toppings.",
+      "prompt": "Use case: product-mockup. Asset: individual food product cutout for PizzET pizza delivery menu. Square 1024x1024 composition. Photorealistic premium studio food photography, consistent warm soft light from upper left. ONE whole round 35 cm Brazilian-style pizza, thick golden lightly blistered crust, slightly elevated three-quarter overhead angle approximately 55 degrees, entire pizza visible and centered with generous 10% transparent margin. Pizza fills about 80% of canvas width. No slice removed. Isolated on genuinely transparent alpha background, no plate, no board, no table, no props, no text, no watermark, no hands. Appetizing realistic food textures. Specific topping: Savory pizza with red tomato sauce, melted mozzarella and abundant round red pepperoni slices with crisp curled edges. No basil or other toppings."
+    },
+    {
+      "arquivo": "vegetariana-de-venus.png",
+      "nome": "Vegetariana de Vênus",
+      "categoria": "pizza",
+      "detalhe": "Vegetarian savory pizza with melted mozzarella, bright green broccoli florets, sliced mushrooms, red tomato pieces and black olives. No meat.",
+      "prompt": "Use case: product-mockup. Asset: individual food product cutout for PizzET pizza delivery menu. Square 1024x1024 composition. Photorealistic premium studio food photography, consistent warm soft light from upper left. ONE whole round 35 cm Brazilian-style pizza, thick golden lightly blistered crust, slightly elevated three-quarter overhead angle approximately 55 degrees, entire pizza visible and centered with generous 10% transparent margin. Pizza fills about 80% of canvas width. No slice removed. Isolated on genuinely transparent alpha background, no plate, no board, no table, no props, no text, no watermark, no hands. Appetizing realistic food textures. Specific topping: Vegetarian savory pizza with melted mozzarella, bright green broccoli florets, sliced mushrooms, red tomato pieces and black olives. No meat."
+    },
+    {
+      "arquivo": "brocolis-nebulosa.png",
+      "nome": "Brócolis Nebulosa",
+      "categoria": "pizza",
+      "detalhe": "Savory pizza with melted mozzarella, bright green broccoli florets, tiny golden toasted garlic pieces and creamy white requeijao cheese swirls. No meat.",
+      "prompt": "Use case: product-mockup. Asset: individual food product cutout for PizzET pizza delivery menu. Square 1024x1024 composition. Photorealistic premium studio food photography, consistent warm soft light from upper left. ONE whole round 35 cm Brazilian-style pizza, thick golden lightly blistered crust, slightly elevated three-quarter overhead angle approximately 55 degrees, entire pizza visible and centered with generous 10% transparent margin. Pizza fills about 80% of canvas width. No slice removed. Isolated on genuinely transparent alpha background, no plate, no board, no table, no props, no text, no watermark, no hands. Appetizing realistic food textures. Specific topping: Savory pizza with melted mozzarella, bright green broccoli florets, tiny golden toasted garlic pieces and creamy white requeijao cheese swirls. No meat."
+    },
+    {
+      "arquivo": "camarao-estelar.png",
+      "nome": "Camarão Estelar",
+      "categoria": "pizza",
+      "detalhe": "Savory pizza with melted mozzarella, plentiful clearly visible cooked pink peeled shrimp, creamy white requeijao cheese and thin pale green leek rings. No meat, no pepperoni.",
+      "prompt": "Use case: product-mockup. Asset: individual food product cutout for PizzET pizza delivery menu. Square 1024x1024 composition. Photorealistic premium studio food photography, consistent warm soft light from upper left. ONE whole round 35 cm Brazilian-style pizza, thick golden lightly blistered crust, slightly elevated three-quarter overhead angle approximately 55 degrees, entire pizza visible and centered with generous 10% transparent margin. Pizza fills about 80% of canvas width. No slice removed. Isolated on genuinely transparent alpha background, no plate, no board, no table, no props, no text, no watermark, no hands. Appetizing realistic food textures. Specific topping: Savory pizza with melted mozzarella, plentiful clearly visible cooked pink peeled shrimp, creamy white requeijao cheese and thin pale green leek rings. No meat, no pepperoni."
+    },
+    {
+      "arquivo": "carne-seca-de-jupiter.png",
+      "nome": "Carne Seca de Júpiter",
+      "categoria": "pizza",
+      "detalhe": "Savory Brazilian pizza with melted mozzarella, shredded browned dried beef carne seca, red onion rings and creamy white requeijao cheese. No pepperoni.",
+      "prompt": "Use case: product-mockup. Asset: individual food product cutout for PizzET pizza delivery menu. Square 1024x1024 composition. Photorealistic premium studio food photography, consistent warm soft light from upper left. ONE whole round 35 cm Brazilian-style pizza, thick golden lightly blistered crust, slightly elevated three-quarter overhead angle approximately 55 degrees, entire pizza visible and centered with generous 10% transparent margin. Pizza fills about 80% of canvas width. No slice removed. Isolated on genuinely transparent alpha background, no plate, no board, no table, no props, no text, no watermark, no hands. Appetizing realistic food textures. Specific topping: Savory Brazilian pizza with melted mozzarella, shredded browned dried beef carne seca, red onion rings and creamy white requeijao cheese. No pepperoni."
+    },
+    {
+      "arquivo": "brigadeiro-meteoro.png",
+      "nome": "Brigadeiro Meteoro",
+      "categoria": "pizza",
+      "detalhe": "Brazilian SWEET dessert pizza with thick glossy milk chocolate brigadeiro topping and many small dark chocolate sprinkles. No tomato sauce, no mozzarella, no savory toppings.",
+      "prompt": "Use case: product-mockup. Asset: individual food product cutout for PizzET pizza delivery menu. Square 1024x1024 composition. Photorealistic premium studio food photography, consistent warm soft light from upper left. ONE whole round 35 cm Brazilian-style pizza, thick golden lightly blistered crust, slightly elevated three-quarter overhead angle approximately 55 degrees, entire pizza visible and centered with generous 10% transparent margin. Pizza fills about 80% of canvas width. No slice removed. Isolated on genuinely transparent alpha background, no plate, no board, no table, no props, no text, no watermark, no hands. Appetizing realistic food textures. Specific topping: Brazilian SWEET dessert pizza with thick glossy milk chocolate brigadeiro topping and many small dark chocolate sprinkles. No tomato sauce, no mozzarella, no savory toppings."
+    },
+    {
+      "arquivo": "morango-via-lactea.png",
+      "nome": "Morango Via Láctea",
+      "categoria": "pizza",
+      "detalhe": "Brazilian SWEET dessert pizza with creamy white chocolate topping and fresh halved red strawberries with visible seeds. No tomato sauce, no savory toppings.",
+      "prompt": "Use case: product-mockup. Asset: individual food product cutout for PizzET pizza delivery menu. Square 1024x1024 composition. Photorealistic premium studio food photography, consistent warm soft light from upper left. ONE whole round 35 cm Brazilian-style pizza, thick golden lightly blistered crust, slightly elevated three-quarter overhead angle approximately 55 degrees, entire pizza visible and centered with generous 10% transparent margin. Pizza fills about 80% of canvas width. No slice removed. Isolated on genuinely transparent alpha background, no plate, no board, no table, no props, no text, no watermark, no hands. Appetizing realistic food textures. Specific topping: Brazilian SWEET dessert pizza with creamy white chocolate topping and fresh halved red strawberries with visible seeds. No tomato sauce, no savory toppings."
+    },
+    {
+      "arquivo": "banana-eclipse.png",
+      "nome": "Banana Eclipse",
+      "categoria": "pizza",
+      "detalhe": "Brazilian SWEET dessert pizza with banana slices, cinnamon sugar dusting and caramel colored dulce de leche ribbons. No tomato sauce, no savory toppings.",
+      "prompt": "Use case: product-mockup. Asset: individual food product cutout for PizzET pizza delivery menu. Square 1024x1024 composition. Photorealistic premium studio food photography, consistent warm soft light from upper left. ONE whole round 35 cm Brazilian-style pizza, thick golden lightly blistered crust, slightly elevated three-quarter overhead angle approximately 55 degrees, entire pizza visible and centered with generous 10% transparent margin. Pizza fills about 80% of canvas width. No slice removed. Isolated on genuinely transparent alpha background, no plate, no board, no table, no props, no text, no watermark, no hands. Appetizing realistic food textures. Specific topping: Brazilian SWEET dessert pizza with banana slices, cinnamon sugar dusting and caramel colored dulce de leche ribbons. No tomato sauce, no savory toppings."
+    },
+    {
+      "arquivo": "romeu-e-julieta-lunar.png",
+      "nome": "Romeu e Julieta Lunar",
+      "categoria": "pizza",
+      "detalhe": "Brazilian SWEET dessert pizza with melted mozzarella cheese and abundant ruby red glossy guava paste goiabada swirls. Guava paste is smooth red jelly, NOT tomato sauce or pepperoni. No savory toppings.",
+      "prompt": "Use case: product-mockup. Asset: individual food product cutout for PizzET pizza delivery menu. Square 1024x1024 composition. Photorealistic premium studio food photography, consistent warm soft light from upper left. ONE whole round 35 cm Brazilian-style pizza, thick golden lightly blistered crust, slightly elevated three-quarter overhead angle approximately 55 degrees, entire pizza visible and centered with generous 10% transparent margin. Pizza fills about 80% of canvas width. No slice removed. Isolated on genuinely transparent alpha background, no plate, no board, no table, no props, no text, no watermark, no hands. Appetizing realistic food textures. Specific topping: Brazilian SWEET dessert pizza with melted mozzarella cheese and abundant ruby red glossy guava paste goiabada swirls. Guava paste is smooth red jelly, NOT tomato sauce or pepperoni. No savory toppings."
+    },
+    {
+      "arquivo": "orbita-de-avela.png",
+      "nome": "Órbita de Avelã",
+      "categoria": "pizza",
+      "detalhe": "Brazilian SWEET dessert pizza with glossy rich dark hazelnut chocolate spread, fresh sliced red strawberries and chopped chocolate pieces. No tomato sauce, no savory toppings.",
+      "prompt": "Use case: product-mockup. Asset: individual food product cutout for PizzET pizza delivery menu. Square 1024x1024 composition. Photorealistic premium studio food photography, consistent warm soft light from upper left. ONE whole round 35 cm Brazilian-style pizza, thick golden lightly blistered crust, slightly elevated three-quarter overhead angle approximately 55 degrees, entire pizza visible and centered with generous 10% transparent margin. Pizza fills about 80% of canvas width. No slice removed. Isolated on genuinely transparent alpha background, no plate, no board, no table, no props, no text, no watermark, no hands. Appetizing realistic food textures. Specific topping: Brazilian SWEET dessert pizza with glossy rich dark hazelnut chocolate spread, fresh sliced red strawberries and chopped chocolate pieces. No tomato sauce, no savory toppings."
+    },
+    {
+      "arquivo": "cometa-de-cookies.png",
+      "nome": "Cometa de Cookies",
+      "categoria": "pizza",
+      "detalhe": "Brazilian SWEET dessert pizza with creamy white chocolate topping, chunks of dark chocolate sandwich cookies with white cream interiors, and chocolate chips. No brand logos. No tomato sauce, no savory toppings.",
+      "prompt": "Use case: product-mockup. Asset: individual food product cutout for PizzET pizza delivery menu. Square 1024x1024 composition. Photorealistic premium studio food photography, consistent warm soft light from upper left. ONE whole round 35 cm Brazilian-style pizza, thick golden lightly blistered crust, slightly elevated three-quarter overhead angle approximately 55 degrees, entire pizza visible and centered with generous 10% transparent margin. Pizza fills about 80% of canvas width. No slice removed. Isolated on genuinely transparent alpha background, no plate, no board, no table, no props, no text, no watermark, no hands. Appetizing realistic food textures. Specific topping: Brazilian SWEET dessert pizza with creamy white chocolate topping, chunks of dark chocolate sandwich cookies with white cream interiors, and chocolate chips. No brand logos. No tomato sauce, no savory toppings."
+    },
+    {
+      "arquivo": "refrigerante-cola-lata.png",
+      "nome": "Refrigerante de Cola — Lata",
+      "categoria": "bebida",
+      "detalhe": "One sealed generic 350 ml standard aluminum cola soda can, silver with a deep red unbranded color panel, silver pull tab and cold condensation droplets. Front three-quarter view. No real brand, no lettering.",
+      "prompt": "Use case: product-mockup. Asset: individual beverage product cutout for PizzET delivery menu. Square 1024x1024 composition. Photorealistic premium studio product photography, soft diffused light, natural reflections, crisp product outline. ONE packaged drink centered and entirely visible, upright, occupies about 78% of canvas height, balanced generous transparent margins. Isolated on genuinely transparent alpha background, no table, no floor, no props, no hands, no watermark. Unbranded packaging. Specific drink: One sealed generic 350 ml standard aluminum cola soda can, silver with a deep red unbranded color panel, silver pull tab and cold condensation droplets. Front three-quarter view. No real brand, no lettering."
+    },
+    {
+      "arquivo": "refrigerante-cola-zero-lata.png",
+      "nome": "Refrigerante de Cola Zero — Lata",
+      "categoria": "bebida",
+      "detalhe": "One sealed generic 350 ml standard aluminum sugar-free cola soda can, matte charcoal black body with silver accents, silver pull tab and cold condensation droplets. Front three-quarter view. No real brand, no lettering. Visually different from a red traditional cola can.",
+      "prompt": "Use case: product-mockup. Asset: individual beverage product cutout for PizzET delivery menu. Square 1024x1024 composition. Photorealistic premium studio product photography, soft diffused light, natural reflections, crisp product outline. ONE packaged drink centered and entirely visible, upright, occupies about 78% of canvas height, balanced generous transparent margins. Isolated on genuinely transparent alpha background, no table, no floor, no props, no hands, no watermark. Unbranded packaging. Specific drink: One sealed generic 350 ml standard aluminum sugar-free cola soda can, matte charcoal black body with silver accents, silver pull tab and cold condensation droplets. Front three-quarter view. No real brand, no lettering. Visually different from a red traditional cola can."
+    },
+    {
+      "arquivo": "refrigerante-guarana-2l.png",
+      "nome": "Refrigerante de Guaraná — 2 L",
+      "categoria": "bebida",
+      "detalhe": "One sealed generic 2 liter clear PET soda bottle filled with amber golden guarana soda, green screw cap and a simple blank green wraparound label, cold condensation droplets. Entire bottle upright. No real brand, no text.",
+      "prompt": "Use case: product-mockup. Asset: individual beverage product cutout for PizzET delivery menu. Square 1024x1024 composition. Photorealistic premium studio product photography, soft diffused light, natural reflections, crisp product outline. ONE packaged drink centered and entirely visible, upright, occupies about 78% of canvas height, balanced generous transparent margins. Isolated on genuinely transparent alpha background, no table, no floor, no props, no hands, no watermark. Unbranded packaging. Specific drink: One sealed generic 2 liter clear PET soda bottle filled with amber golden guarana soda, green screw cap and a simple blank green wraparound label, cold condensation droplets. Entire bottle upright. No real brand, no text."
+    },
+    {
+      "arquivo": "suco-de-laranja.png",
+      "nome": "Suco de Laranja",
+      "categoria": "bebida",
+      "detalhe": "One sealed 500 ml clear PET juice bottle filled with opaque freshly squeezed orange juice, white screw cap and a small plain cream blank label. Entire bottle upright. Rich natural orange color, realistic subtle condensation. No text, no brand, no accompanying fruit.",
+      "prompt": "Use case: product-mockup. Asset: individual beverage product cutout for PizzET delivery menu. Square 1024x1024 composition. Photorealistic premium studio product photography, soft diffused light, natural reflections, crisp product outline. ONE packaged drink centered and entirely visible, upright, occupies about 78% of canvas height, balanced generous transparent margins. Isolated on genuinely transparent alpha background, no table, no floor, no props, no hands, no watermark. Unbranded packaging. Specific drink: One sealed 500 ml clear PET juice bottle filled with opaque freshly squeezed orange juice, white screw cap and a small plain cream blank label. Entire bottle upright. Rich natural orange color, realistic subtle condensation. No text, no brand, no accompanying fruit."
+    },
+    {
+      "arquivo": "suco-de-uva.png",
+      "nome": "Suco de Uva",
+      "categoria": "bebida",
+      "detalhe": "One sealed 500 ml clear PET juice bottle filled with deep purple grape juice, white screw cap and small plain cream blank label. Entire bottle upright. Realistic subtle condensation. No text, no brand, no accompanying fruit.",
+      "prompt": "Use case: product-mockup. Asset: individual beverage product cutout for PizzET delivery menu. Square 1024x1024 composition. Photorealistic premium studio product photography, soft diffused light, natural reflections, crisp product outline. ONE packaged drink centered and entirely visible, upright, occupies about 78% of canvas height, balanced generous transparent margins. Isolated on genuinely transparent alpha background, no table, no floor, no props, no hands, no watermark. Unbranded packaging. Specific drink: One sealed 500 ml clear PET juice bottle filled with deep purple grape juice, white screw cap and small plain cream blank label. Entire bottle upright. Realistic subtle condensation. No text, no brand, no accompanying fruit."
+    },
+    {
+      "arquivo": "agua-mineral.png",
+      "nome": "Água Mineral",
+      "categoria": "bebida",
+      "detalhe": "One sealed 500 ml transparent PET mineral water bottle filled with clear still water, BLUE screw cap and a small plain pale blue blank label, cold condensation. Entire bottle upright. No text, no brand.",
+      "prompt": "Use case: product-mockup. Asset: individual beverage product cutout for PizzET delivery menu. Square 1024x1024 composition. Photorealistic premium studio product photography, soft diffused light, natural reflections, crisp product outline. ONE packaged drink centered and entirely visible, upright, occupies about 78% of canvas height, balanced generous transparent margins. Isolated on genuinely transparent alpha background, no table, no floor, no props, no hands, no watermark. Unbranded packaging. Specific drink: One sealed 500 ml transparent PET mineral water bottle filled with clear still water, BLUE screw cap and a small plain pale blue blank label, cold condensation. Entire bottle upright. No text, no brand."
+    },
+    {
+      "arquivo": "agua-com-gas.png",
+      "nome": "Água com Gás",
+      "categoria": "bebida",
+      "detalhe": "One sealed 500 ml transparent PET mineral water bottle filled with clear sparkling water with visible tiny bubbles, GREEN screw cap and small plain pale green blank label, cold condensation. Entire bottle upright. No text, no brand.",
+      "prompt": "Use case: product-mockup. Asset: individual beverage product cutout for PizzET delivery menu. Square 1024x1024 composition. Photorealistic premium studio product photography, soft diffused light, natural reflections, crisp product outline. ONE packaged drink centered and entirely visible, upright, occupies about 78% of canvas height, balanced generous transparent margins. Isolated on genuinely transparent alpha background, no table, no floor, no props, no hands, no watermark. Unbranded packaging. Specific drink: One sealed 500 ml transparent PET mineral water bottle filled with clear sparkling water with visible tiny bubbles, GREEN screw cap and small plain pale green blank label, cold condensation. Entire bottle upright. No text, no brand."
+    }
+  ]
+}

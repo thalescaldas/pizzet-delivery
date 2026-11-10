@@ -1,0 +1,290 @@
+/* O tema escuro continua em style.css. Aqui ficam apenas as diferenças do claro. */
+.alternar-tema {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:34px;
+  height:34px;
+  padding:0;
+  flex-shrink:0;
+  border:0;
+  border-radius:50%;
+  color:inherit;
+  background:transparent;
+  font-size:23px;
+  line-height:1;
+}
+
+html[data-tema="claro"] {
+  --cinza:#625774;
+  --borda:#cbc0d9;
+  --verde-texto:#277414;
+  color-scheme:light;
+}
+
+html[data-tema="escuro"] {
+  color-scheme:dark;
+}
+
+[data-tema="claro"] body {
+  color:#211039;
+  background:#e8e4ef;
+}
+
+[data-tema="claro"] body[data-pagina="index"] #cabecalho {
+  mix-blend-mode:normal;
+}
+
+[data-tema="claro"] .hero-fundo {
+  content:url('../assets/hero-claro.png');
+  filter:brightness(.91) saturate(.88);
+  mask-image:linear-gradient(#000 0%, #000 89%, transparent 100%);
+}
+
+[data-tema="claro"] .home-cenario:after,
+
+[data-tema="claro"] .cenario-interno:after {
+  background:linear-gradient(90deg,#e8e4ef 1%,#e8e4efdc 23%,#e8e4ef66 34%,transparent 46%);
+}
+
+[data-tema="claro"] .home-cenario:before,
+
+[data-tema="claro"] .cenario-interno:before {
+  background:
+    radial-gradient(circle at 5% 18%, #9263c799 0 1px, transparent 2px),
+    radial-gradient(circle at 14% 43%, #9263c788 0 1px, transparent 2px),
+    radial-gradient(circle at 9% 77%, #9263c799 0 1px, transparent 2px),
+    radial-gradient(circle at 23% 9%, #9263c799 0 1px, transparent 2px),
+    radial-gradient(ellipse at 0% 65%, #ddc6f955, transparent 48%),
+    radial-gradient(ellipse at 28% 5%, #e7d7fc55, transparent 45%);
+}
+
+[data-tema="claro"] .marca {
+  background:transparent;
+  padding:0;
+}
+
+[data-tema="claro"] .marca-imagem {
+  content:url('../assets/logo-pizzet-transparente.png');
+  mix-blend-mode:normal;
+  filter:drop-shadow(0 1px 1px #32194d44);
+}
+
+[data-tema="claro"] .formulario .marca {
+  width:fit-content;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+[data-tema="claro"] .navegacao a {
+  color:#36204f;
+  text-shadow:none;
+}
+
+[data-tema="claro"] .navegacao a.ativo,
+[data-tema="claro"] .navegacao a:hover,
+[data-tema="claro"] .navegacao a:focus-visible {
+  color:#642c98;
+}
+
+[data-tema="claro"] .menu {
+  color:#36204f;
+  background:#f2eef7e6;
+  border-color:var(--borda);
+}
+
+.acoes > a[aria-label="Buscar pizzas"],
+[data-tema="claro"] .sacola {
+  background:transparent;
+  border:0;
+  box-shadow:none;
+}
+
+[data-tema="claro"] .contador {
+  border-color:#fff;
+}
+
+[data-tema="claro"] .hero h1 {
+  color:#341467;
+}
+
+[data-tema="claro"] .hero h1 span {
+  color:#39a916;
+}
+
+[data-tema="claro"] .etiqueta,
+[data-tema="claro"] .link-verde,
+[data-tema="claro"] .estrelas,
+[data-tema="claro"] .preco-grande,
+[data-tema="claro"] .resumo .total,
+[data-tema="claro"] .metrica strong {
+  color:var(--verde-texto);
+}
+
+[data-tema="claro"] .hero-info {
+  color:#625774;
+}
+
+[data-tema="claro"] .hero-info strong {
+  color:#321d49;
+}
+
+[data-tema="claro"] .home-cenario .beneficios {
+  background:#f2eef7e6;
+  text-shadow:none;
+  box-shadow:0 8px 25px #4324650d;
+}
+
+[data-tema="claro"] .cartao,
+[data-tema="claro"] .painel {
+  background:linear-gradient(135deg,#f4f0f8,#ebe5f2);
+  border-color:var(--borda);
+  box-shadow:0 5px 20px #43246508;
+}
+
+[data-tema="claro"] .cartao:hover {
+  border-color:#ab87ca;
+}
+
+[data-tema="claro"] .foto-produto {
+  background:radial-gradient(ellipse at center,#e9d9f799,transparent 75%);
+}
+
+[data-tema="claro"] .foto-produto img {
+  filter:drop-shadow(0 10px 12px #5d358524);
+}
+
+[data-tema="claro"] .selo {
+  color:#573174;
+  background:#e8ddf4ed;
+  border-color:#d9c5e9;
+}
+
+[data-tema="claro"] .convite {
+  background:radial-gradient(ellipse at 100% 80%,#ddc4fa,#e9dff4 70%);
+  border-color:#d7c5e7;
+}
+
+[data-tema="claro"] .botao.secundario,
+[data-tema="claro"] .filtro {
+  color:#432465;
+  border-color:#d3c4e3;
+  background:#f2eef7;
+}
+
+[data-tema="claro"] .botao.secundario:hover {
+  background:#eee2fa;
+}
+
+[data-tema="claro"] .filtro.ativo {
+  color:#162509;
+  background:var(--verde);
+  border-color:var(--verde);
+}
+
+[data-tema="claro"] input,
+[data-tema="claro"] select,
+[data-tema="claro"] textarea {
+  color:#2f1949;
+  background:#e8e1f0;
+  border-color:#d6cce3;
+}
+
+[data-tema="claro"] input::placeholder,
+[data-tema="claro"] textarea::placeholder {
+  color:#797084;
+  opacity:1;
+}
+
+[data-tema="claro"] .detalhe-img {
+  background:radial-gradient(ellipse,#edddff,#f7f0ff 75%);
+  border-color:#d7c4e7;
+}
+
+[data-tema="claro"] .quantidade {
+  border-color:#d6cce3;
+}
+
+[data-tema="claro"] .quantidade button {
+  color:#3c2059;
+  background:#ece5f5;
+}
+
+[data-tema="claro"] .formulario a,
+[data-tema="claro"] .aviso-demo,
+[data-tema="claro"] .demonstracao {
+  color:#725088;
+}
+
+[data-tema="claro"] .excluir {
+  color:#b82d50;
+}
+
+[data-tema="claro"] .badge,
+[data-tema="claro"] .barra-admin a.ativo {
+  color:#286016;
+  background:#e1f7d5;
+}
+
+[data-tema="claro"] .etapas li {
+  border-color:#c6b4d5;
+}
+
+[data-tema="claro"] .etapas li:before {
+  background:#f4edf9;
+  border-color:#b29ac6;
+}
+
+[data-tema="claro"] .etapas li.feita {
+  color:#36204f;
+  border-color:#53b72a;
+}
+
+[data-tema="claro"] .etapas li.feita:before {
+  background:var(--verde);
+  border-color:#53b72a;
+}
+
+[data-tema="claro"] .etapas li:last-child {
+  border-color:transparent;
+}
+
+[data-tema="claro"] .sucesso-icone {
+  color:#389719;
+}
+
+[data-tema="claro"] th {
+  color:#725088;
+}
+
+[data-tema="claro"] .rodape-base,
+[data-tema="claro"] .vendas {
+  border-color:var(--borda);
+  color:#796987;
+}
+
+@media(max-width:850px) and (min-width:601px) {
+  .acoes { gap:8px; }
+  .cabecalho { gap:18px; }
+  .navegacao { gap:12px; }
+}
+
+@media(max-width:600px) {
+  .acoes { gap:7px; }
+  .acoes > a[aria-label="Buscar pizzas"] { display:none; }
+  .alternar-tema { width:32px; height:32px; }
+  [data-tema="claro"] .navegacao {
+    background:#e8e4eff5;
+    border-color:var(--borda);
+  }
+  [data-tema="claro"] .home-cenario:after,
+  [data-tema="claro"] .cenario-interno:after {
+    background:linear-gradient(#e8e4ef 0%,#e8e4ef 31%,transparent 42%);
+  }
+  [data-tema="claro"] .home-cenario > .hero-fundo,
+  [data-tema="claro"] .cenario-interno > .hero-fundo {
+    top:450px;
+    height:640px;
+    mask-image:linear-gradient(transparent 0%, #000 10%, #000 89%, transparent 100%);
+  }
+}

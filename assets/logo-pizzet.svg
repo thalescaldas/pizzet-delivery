@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 88" fill="none">
+  <defs>
+    <linearGradient id="vidro" x1="30" y1="12" x2="67" y2="53" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#623b9a"/><stop offset="1" stop-color="#181025"/>
+    </linearGradient>
+    <linearGradient id="casco" x1="22" y1="47" x2="72" y2="70" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#c1ff76"/><stop offset=".5" stop-color="#79fa36"/><stop offset="1" stop-color="#36b44b"/>
+    </linearGradient>
+  </defs>
+  <path d="m38 64-9 17 21-8 19 8-8-17" fill="#79fa36" opacity=".12"/>
+  <ellipse cx="49" cy="47" rx="46" ry="17" transform="rotate(-19 49 47)" stroke="#b38ae8" stroke-width="1.5" stroke-dasharray="49 10 9 13" opacity=".65"/>
+  <g transform="rotate(-10 50 44)">
+    <path d="M26 43v-7a24 24 0 0 1 48 0v7" fill="url(#vidro)" stroke="#bc9ce9" stroke-width="2"/>
+    <path d="M32 31a18 18 0 0 1 13-12" stroke="#efe1ff" stroke-width="2" stroke-linecap="round" opacity=".7"/>
+    <path d="M39 31c0-12 22-12 22 0 0 8-7 17-11 17s-11-9-11-17Z" fill="#91ff4e"/>
+    <path d="M42 31c5 0 7 3 6 7-4 0-6-3-6-7Zm16 0c-5 0-7 3-6 7 4 0 6-3 6-7Z" fill="#181025"/>
+    <path d="M48 42h4" stroke="#255e28" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M16 49c5 21 63 21 68 0" fill="url(#casco)" stroke="#a4ff60" stroke-width="2"/>
+    <ellipse cx="50" cy="47" rx="38" ry="10" fill="#21152e" stroke="#98ff57" stroke-width="2.5"/>
+    <path d="M20 46c13-8 47-8 60 0" stroke="#d2ff9d" stroke-width="2" stroke-linecap="round"/>
+    <ellipse cx="29" cy="49" rx="4" ry="2" fill="#b28ae5"/>
+    <ellipse cx="50" cy="51" rx="4" ry="2" fill="#b8ff77"/>
+    <ellipse cx="71" cy="49" rx="4" ry="2" fill="#b28ae5"/>
+    <path d="M35 64h30" stroke="#79fa36" stroke-width="2" stroke-linecap="round" opacity=".6"/>
+  </g>
+  <path d="m83 10 2 5 5 2-5 2-2 5-2-5-5-2 5-2Z" fill="#b6ff78"/>
+  <circle cx="14" cy="26" r="2" fill="#b28ae5"/>
+</svg>
